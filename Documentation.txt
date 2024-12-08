@@ -1,0 +1,31 @@
+The Spatial Digital Twin was created using ARCGIS pro and there is the 2D version of SDT available in this folder. This can be seen using QGIS software and it contains data incorporated from the original SDT.
+
+On this SDT, we created a Knowledge Graph using Themes as nodes and formed relationships.
+
+To run the Knowledge graph, we need a python script which implements all the functionalities, NEO4J Software where all the Data gets stored for knowledge graph.
+
+All the data is stored  on Localhost:7687.
+
+Firstly, We initialize the graph database and connect it to python script.
+
+Using the script, we created a knowledge graph and formed all the nodes and sub-nodes using functions present in the script.
+
+Once the graph is created, it is populated with the data relevant to SDT to perform Query processing.
+
+After data is added and knowledge graph is finalized we performed several queries like search, range, KNN and combination of these queries.
+
+For search query, user enters the theme for which they are interested in based on the available themes.
+
+For Range Query, User enters the latitude and Longitude points of start and end point.
+
+For KNN Query, User selects a reference point and K (how many features they want to search)
+
+Then, to make it more realistic we added embeddings and calculated cosine similarities to get most relevant themes for arbitory values added by users.
+
+Using these embeddings, we performed all the above mentioned queries.
+
+Finally, to compare the KG model with SQL model, we used POSTGRESQL software PGmyAdmin.
+
+We populated the database (mydb) in PgAdmin and connected with the python script.
+
+Then, we calculated the execution time for the queries in both the models and compared them for all the queries.
